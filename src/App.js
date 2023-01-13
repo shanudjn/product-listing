@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Flex, Heading } from "@chakra-ui/react";
+import "./App.css";
+import { Filters } from "./components/Filters";
+import { products } from "./data/products";
+import { ProductsListing } from "./pages/ProductListing";
 
+console.log(products);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Heading padding={"2rem"}>The Souq</Heading>
+      <Flex className="App" justifyContent={"center"} alignItems={"flex-start"}>
+        <Filters products={products} />
+        <ProductsListing products={products} width={"60%"} margin={"auto"} />
+      </Flex>
+    </>
   );
 }
 
