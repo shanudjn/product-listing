@@ -8,9 +8,12 @@ export const getFilteredProducts = (data, filter) => {
     }
   }
   if (filter.idealFor) {
+    console.log("ideal for", filter.idealFor);
     products = products.filter(
+      // (product) => console.log(filter.idealFor)
       (product) => product.idealFor === filter.idealFor
     );
+    console.log(products);
   }
   if (filter.brand.length > 0) {
     products = products.filter((product) =>

@@ -1,11 +1,11 @@
 import {
     Button,
-    ButtonGroup,
+
+  Checkbox,
+
   Flex,
+  FormLabel,
   Heading,
-  Radio,
-  RadioGroup,
-  Stack,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -23,13 +23,13 @@ export const Filters = ({ products }) => {
       height={"100vh"}
       position="sticky"
       paddingX={"2rem"}
-      border={"1px solid red"}
+
       width="25%"
     >
       <Flex
         flexDirection={"row"}
         justifyContent={"space-between"}
-        border={"1px solid red"}
+
         alignItems={"center"}
         width="100%"
       >
@@ -39,8 +39,8 @@ export const Filters = ({ products }) => {
         </Button>
       </Flex>
       <Flex flexDirection={"column"}>
-        <p>Sort by price</p>
-        <label>
+        <Text fontSize={'md'}>Sort by price</Text>
+        <FormLabel>
           <input
             type="radio"
             name="price"
@@ -50,8 +50,8 @@ export const Filters = ({ products }) => {
             }
           />
           Low to High
-        </label>
-        <label>
+        </FormLabel>
+        <FormLabel>
           <input
             type="radio"
             name="price"
@@ -61,18 +61,18 @@ export const Filters = ({ products }) => {
             }
           />
           High to Low
-        </label>
+        </FormLabel>
       </Flex>
       <Flex flexDirection={"column"} alignItems="flex-start">
         <p>Brands</p>
         {brands.map((item, idx) => (
           <label key={idx}>
-            <input
+            <Checkbox
               type="checkbox"
               checked={filter.brand.some((value) => value === item)}
               onChange={() => dispatch({ type: "TOGGLE_BRAND", payload: item })}
-            />
-            {item}
+            >
+            {item}</Checkbox>
           </label>
         ))}
       </Flex>
@@ -81,14 +81,14 @@ export const Filters = ({ products }) => {
         {sizes.map((item, idx) => (
           <Flex flexDirection={"row"}>
             <label key={idx}>
-              <input
+              <Checkbox
                 type="checkbox"
                 checked={filter.size.some((value) => value === item)}
                 onChange={() =>
                   dispatch({ type: "TOGGLE_SIZE", payload: item })
                 }
-              />
-              {item}
+              >
+              {item}</Checkbox>
             </label>
           </Flex>
         ))}
@@ -99,7 +99,7 @@ export const Filters = ({ products }) => {
           <input
             type="radio"
             name="ideal"
-            checked={filter.ideal === "men"}
+            checked={filter.idealFor === "men"}
             onChange={() => dispatch({ type: "IDEAL_FOR", payload: "men" })}
           />
           Men
@@ -108,7 +108,7 @@ export const Filters = ({ products }) => {
           <input
             type="radio"
             name="ideal"
-            checked={filter.ideal === "women"}
+            checked={filter.idealFor === "women"}
             onChange={() => dispatch({ type: "IDEAL_FOR", payload: "women" })}
           />
           Women

@@ -2,7 +2,7 @@ export const initialState = {
   sortBy: "",
   brand: [],
   size: [],
-  ideal: "",
+  idealFor: "",
 };
 
 export const reducer = (state, { type, payload }) => {
@@ -10,7 +10,8 @@ export const reducer = (state, { type, payload }) => {
     case "SORT_BY":
       return { ...state, sortBy: payload };
     case "IDEAL_FOR":
-      return { ...state, ideal: payload };
+      // console.log("ideal for 1", payload);
+      return { ...state, idealFor: payload };
     case "TOGGLE_BRAND":
       const isBrandFiltered = state.brand.find((item) => item === payload);
       return isBrandFiltered
