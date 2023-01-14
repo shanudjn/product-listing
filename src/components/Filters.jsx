@@ -38,8 +38,8 @@ export const Filters = ({ products }) => {
         </Button>
       </Flex>
       <Flex flexDirection={"column"} alignItems="flex-start">
-        <p>Sort by price</p>
-        <FormLabel>
+        <Heading as={'h6'} size="xs">Sort by price</Heading>
+        <FormLabel fontWeight={'400'}>
           <input
             type="radio"
             name="price"
@@ -50,7 +50,7 @@ export const Filters = ({ products }) => {
           />
           Low to High
         </FormLabel>
-        <FormLabel>
+        <FormLabel fontWeight={'400'}>
           <input
             type="radio"
             name="price"
@@ -63,7 +63,7 @@ export const Filters = ({ products }) => {
         </FormLabel>
       </Flex>
       <Flex flexDirection={"column"} alignItems="flex-start">
-        <p>Brands</p>
+        <Heading as={'h6'} size="xs">Brands</Heading>
         {brands.map((item, idx) => (
           <label key={idx}>
             <Checkbox
@@ -76,7 +76,7 @@ export const Filters = ({ products }) => {
         ))}
       </Flex>
       <Flex flexDirection={"column"} alignItems="flex-start">
-        <p>Size</p>
+        <Heading as={'h6'} size="xs">Size</Heading>
         {sizes.map((item, idx) => (
           <Flex flexDirection={"row"}>
             <label key={idx}>
@@ -93,7 +93,7 @@ export const Filters = ({ products }) => {
         ))}
       </Flex>
       <Flex flexDirection={"column"} alignItems="flex-start">
-        <p>Ideal for</p>
+        <Heading as={'h6'} size="xs">Ideal for</Heading>
         <label>
           <input
             type="radio"

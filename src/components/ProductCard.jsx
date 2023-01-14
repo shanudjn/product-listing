@@ -20,6 +20,7 @@ export const ProductCard = ({ product }) => {
           src={product.image}
           alt="Green double couch with wooden legs"
           borderRadius="lg"
+          height={"150px"}
         />
         <Stack mt="6" spacing="3" align={"flex-start"}>
           <Heading size="md">{product.name}</Heading>
