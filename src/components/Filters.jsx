@@ -23,7 +23,6 @@ export const Filters = ({ products }) => {
       height={"100vh"}
       position="sticky"
       paddingX={"2rem"}
-
       width="25%"
     >
       <Flex
@@ -38,8 +37,8 @@ export const Filters = ({ products }) => {
           Clear all
         </Button>
       </Flex>
-      <Flex flexDirection={"column"}>
-        <Text fontSize={'md'}>Sort by price</Text>
+      <Flex flexDirection={"column"} alignItems="flex-start">
+        <p>Sort by price</p>
         <FormLabel>
           <input
             type="radio"

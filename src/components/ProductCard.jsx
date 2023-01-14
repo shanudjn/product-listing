@@ -27,6 +27,7 @@ export const ProductCard = ({ product }) => {
           <Text color="blue.600" fontSize="2xl">
             &#8377;{product.price}
           </Text>
+          <Text>Available Sizes : {product.size.join(', ')}</Text>
         </Stack>
       </CardBody>
       <Divider />
