@@ -5,8 +5,7 @@ This project is hosted on  [Netlify](https://product-listing-shahazad.netlify.ap
 ## React Concepts Implemented
 The follwing the concepts in ReactJS that were implemented in this project
 1. Hooks(useState, useEffect, useContext, userReducer)
-2. react-router-v6
-3. ChakraUI for styling of components
+3. ChakraUI for styling of component2
 
 ## Future functionality.
 1. Add to cart
