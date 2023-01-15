@@ -1,6 +1,6 @@
 # Product Listing v1.0
 
-This project is hosted on  [Netlify](https://grab-store.netlify.app/).
+This project is hosted on  [Netlify](https://product-listing-shahazad.netlify.app/).
 
 ## React Concepts Implemented
 The follwing the concepts in ReactJS that were implemented in this project
